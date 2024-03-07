@@ -138,4 +138,4 @@ function nextP_slide_0() {
 }
 showP_slide_0( PcurrentSlide_0 );
 
-setInterval(nextP_slide_0, 15000);
+setInterval(nextP_slide_0, 5000);
