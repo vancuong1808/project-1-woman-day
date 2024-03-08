@@ -216,8 +216,5 @@
         display: block;
         animation: slide-go-left 1s linear;
       }
-      
-      audio::-webkit-media-controls-panel {
-        display: none!important;
-    }
+
 }
