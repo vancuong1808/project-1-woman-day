@@ -148,6 +148,7 @@ function nextP_slide_0() {
   // audioPause()
   showP_slide_0(PcurrentSlide_0);
 }
+
 showP_slide_0( PcurrentSlide_0 );
 
 setInterval(nextP_slide_0, 5000);
