@@ -21,7 +21,8 @@ const P_slideCount_0 = P_slide_0.length;
 let black = document.querySelectorAll('.bk-black');
 let contain = document.querySelectorAll('.slideshow-container');
 
-let nhac = document.querySelector('#nhac')
+let woman_day = document.querySelector('.happy_woman');
+
 
 let left_arrow_1 = document.querySelector('.left-arrow_1');
 let right_arrow_1 = document.querySelector('.right-arrow_1');
@@ -29,13 +30,11 @@ let left_arrow_2 = document.querySelector('.left-arrow_2');
 let right_arrow_2 = document.querySelector('.right-arrow_2');
 
 
-function audioPause() {
-  nhac.pause();
-}
-function audioPlay() {
-  nhac.play();
-}
 
+woman_day.addEventListener('click', function(){
+  let nhac = document.querySelector('#nhac')
+  nhac.play();
+})
 
 function showSlide(n) {
   slides.forEach(function(slide) {
@@ -60,7 +59,7 @@ left_arrow_1.addEventListener('click', prevSlide);
 
 
 // Optional: Auto slide
-setInterval(nextSlide, 15000); // Change slide every 3 seconds
+setInterval(nextSlide, 8000); // Change slide every 3 seconds
 // gọi hàm theo thời thgian
 // setInterval( nextSlide, 1000 )
 
@@ -84,7 +83,7 @@ function prevP_slide() {
 showP_slide( PcurrentSlide );
 right_arrow_1.addEventListener('click', nextP_slide);
 left_arrow_1.addEventListener('click', prevP_slide);
-setInterval(nextP_slide, 15000);
+setInterval(nextP_slide, 8000);
 
 function showSlide_2( n ) {
   slides_2.forEach(function(slides_2){
@@ -106,7 +105,7 @@ function prevslide_2() {
 showSlide_2(currentSlide_2);
 right_arrow_2.addEventListener('click', nextslide_2);
 left_arrow_2.addEventListener('click', prevslide_2);
-setInterval( nextslide_2, 15000 );
+setInterval( nextslide_2, 8000 );
 
 function showP_slide_2(n) {
   P_slide_2.forEach( function(p_slide){
@@ -128,7 +127,7 @@ function prevP_slide_2() {
 showP_slide_2( PcurrentSlide_2 );
 right_arrow_2.addEventListener('click', nextP_slide_2);
 left_arrow_2.addEventListener('click', prevP_slide_2);
-setInterval(nextP_slide_2, 15000);
+setInterval(nextP_slide_2, 8000);
 
 function showP_slide_0(n) {
   P_slide_0.forEach( function(p_slide){
@@ -142,11 +141,10 @@ function nextP_slide_0() {
   if ( PcurrentSlide_0 == 0 ) {
     black[0].classList.add('active');
     contain[0].classList.add('active');
-    audioPlay();
-    return;
   }
   // audioPause()
   showP_slide_0(PcurrentSlide_0);
+  return false;
 }
 
 showP_slide_0( PcurrentSlide_0 );
